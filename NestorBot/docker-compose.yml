@@ -1,0 +1,20 @@
+version: '3.6'
+services:
+  nestor:
+    build:
+      context: ./NestorApp
+    container_name: nestor_slackconnector
+    environment:
+      - MONGO_HOST=database
+    depends_on:
+      - database
+  database:
+    image: mongo
+    container_name: nestor_mongo
+    environment:
+      - MONGO_INITDB_DATABASE=nestor
+    volumes:
+      - ./mongodata:/data/db
+    ports:
+      - '27017-27019:27017-27019'
+    
