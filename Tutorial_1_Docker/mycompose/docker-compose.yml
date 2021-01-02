@@ -1,0 +1,22 @@
+version: '3'  
+services:  
+  app:
+    build:
+      context: ./app 
+        # Se le dice que trabaje con la carpeta app,
+        # ya que dentro hay un dockerfile.
+    depends_on:
+      - redis
+    environment:
+      - REDIS_HOST=redis
+    ports:
+      - "3001:5000"
+  redis:
+    image: redis:3.2-alpine
+    volumes:
+      # redis necesita usar una carpeta "data".
+      # le paso una carpeta dentro de la carpeta compartida "redis_data".
+      - ./redis_data/rdata:/data
+volumes: 
+  # Se define volumen en un nivel alto para permitir el acceso entre servicios
+  redis_data:

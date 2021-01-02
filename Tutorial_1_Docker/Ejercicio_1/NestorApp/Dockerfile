@@ -1,9 +1,12 @@
-FROM python:3.6.3
+FROM python:latest
 
 ENV MONGO_HOST localhost
 ENV MONGO_PORT 27017
-ENV SLACKBOT_TOKEN=""
-ENV SLACK_EVENTS_TOKEN=""
+
+# Esto se declara, pero fue dejado en blanco para git
+ENV SLACKBOT_TOKEN="" 
+# ENV SLACK_EVENTS_TOKEN=""
+# -----------------------
 
 COPY ./requirements.txt /requirements.txt
 

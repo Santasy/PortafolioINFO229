@@ -38,15 +38,17 @@ class NestorBot:
         return self.textToBlock(text)
 
     def _choose_message(self):
-        # Conexión MONGO
+        # Conexion MONGO
         myclient = pymongo.MongoClient(host=os.environ['MONGO_HOST'], port=int(os.environ['MONGO_PORT']))
         db = myclient[DATABASE]
-        col = db[COLLECTION]
+        collection = db[COLLECTION]
         
-        # Consulta:
+        # Consulta mongo:
         var = [{'$sample': {'size': 1}}]
-        results = col.aggregate(var)
+        results = collection.aggregate(var)
+        # Parse:
         text = " "
         for doc in results:
             text = doc["text"]
+        print(f'Will send: {text}')
         return self.textToBlock(text)
