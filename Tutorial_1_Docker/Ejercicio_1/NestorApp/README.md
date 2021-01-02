@@ -14,5 +14,3 @@ Para ingresar elementos a mongo ocupé:
 1. use nestor
 1. nestor.frases.insertOne( { text: "Primera frase de mongo" } )
 ```
-El resultado en Slack:
-![Resultado](/resultado.png)
