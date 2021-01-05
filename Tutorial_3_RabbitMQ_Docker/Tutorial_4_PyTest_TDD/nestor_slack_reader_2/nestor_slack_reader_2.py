@@ -7,8 +7,7 @@ from flask import Flask
 from slackeventsapi import SlackEventAdapter
 from slack import WebClient
 
-
-time.sleep(30)
+time.sleep(25)
 
 ############ CONEXION RABBITMQ ##############
 
@@ -47,6 +46,8 @@ def message(payload):
     """
   
     # Get the event data from the payload
+    print("Payload:")
+    print(payload)
     event = payload.get("event", {})
 
     # Get the text from the event that came through

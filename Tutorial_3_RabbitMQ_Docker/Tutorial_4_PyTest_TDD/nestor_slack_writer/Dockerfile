@@ -4,6 +4,8 @@ ENV SLACK_TOKEN=""
 
 COPY ./requirements.txt /requirements.txt
 
+ENV PYTHONUNBUFFERED=1
+
 RUN pip install -r /requirements.txt
 
 WORKDIR /nestor_slack_writer

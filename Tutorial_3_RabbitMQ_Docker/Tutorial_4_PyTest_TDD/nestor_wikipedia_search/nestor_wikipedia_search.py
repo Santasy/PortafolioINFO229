@@ -6,7 +6,7 @@ import wikipedia
 
 wikipedia.set_lang("es")
 
-time.sleep(30)
+time.sleep(25)
 
 
 ########### CONNEXIÓN A RABBIT MQ #######################
@@ -25,7 +25,6 @@ queue_name = result.method.queue
 
 #La cola se asigna a un 'exchange'
 channel.queue_bind(exchange='nestor', queue=queue_name, routing_key="wikipedia")
-
 
 ##########################################################
 
