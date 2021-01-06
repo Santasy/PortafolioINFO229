@@ -44,7 +44,7 @@ Comando|Descripción
 `git diff --base <filename>`|Ver los conflictos respecto al archivo base.
 `git diff <source> <target>`|Ver los conflictos entre la rama source y la target (destino).
 `git checkout -- <filename>`|Permite revertir cambios respecto a los últimos archivos confirmados con `git add`.
-`git fetch origin && git reset --gard origin/master`|Revierte todos los cambios efectuados, y se alínea con los archivos del repositorio remoto.
+`git fetch origin && git reset --hard origin/master`|Revierte todos los cambios efectuados, y se alínea con los archivos del repositorio remoto.
 
 4. Para `.gitignore`:
 
