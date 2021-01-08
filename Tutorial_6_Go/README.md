@@ -16,6 +16,7 @@ Dentro de un código, se pueden definir paquetes con `package <nombre>`, donde s
 `go test`: Utiliza los archivos `_test.go` que hayan sido desarrollados, para realizar pruebas unitarias. Se le puede agregar la flag `-v` para ver más información de la ejecución, o especificar funciones específicas a probar.
 
 `go list -f '{{.Target}}'`: Muestra el directorio donde se instalará el programa una vez construído.
+
 ---
 
 #### Respecto al ejemplo
