@@ -1,4 +1,4 @@
-PrimeReact es un framework de front-end adaptado para React, pues se origina de PrimeFaces, existiendo también compatibilidad con Angular, Vue y JavaServer Faces.
+PrimeReact es un framework de front-end adaptado para React, pues se origina de PrimeFaces, existiendo también compatibilidad con Angular, Vue y JavaServer Faces. Tiene similitudes con Bootstrap, e incluso plantillas css que se basan en él. Es bastante cómodo de utilizar, y me pareció mucho más confiable que Bootstrap, el cual bajo ciertas circunstancias no funciona muy bien.
 
 En el presente ejemplo de integración ocuparé el administrador de paquetes `yarn`. Primero es necesario crear el proyecto react:
 > `yarn create react-app tutorial_app`
