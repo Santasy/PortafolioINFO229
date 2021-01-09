@@ -1,0 +1,51 @@
+version: '3.6'  
+services:
+  rabbitmq:
+   image: rabbitmq:3-management
+   ports:
+      # The standard AMQP protocol port
+      - '5672:5672'
+      # HTTP management UI
+      - '15672:15672'
+   networks:
+      - network
+   container_name: rabbitmq
+   restart: 'always'
+  
+  nestor_slack_reader_2:
+   build:
+     context: ./nestor_slack_reader_2
+   container_name: nestor_slack_reader_2
+   environment:
+      - RABBITMQ_HOST=rabbitmq
+   depends_on:
+      - rabbitmq
+   ports:
+      - 3000:3000   
+   networks:
+      - network
+
+  nestor_slack_writer:
+   build:
+     context: ./nestor_slack_writer
+   container_name: nestor_slack_writer
+   environment:
+      - RABBITMQ_HOST=rabbitmq
+   depends_on:
+      - rabbitmq   
+   networks:
+      - network
+
+  nestor_sqlite:
+   build:
+     context: ./nestor_sqlite
+   container_name: nestor_sqlite
+   environment:
+      - RABBITMQ_HOST=rabbitmq
+   depends_on:
+      - rabbitmq   
+   networks:
+      - network
+
+networks:
+  network: {}
