@@ -50,4 +50,4 @@ Comando|Descripción
 
 Comando|Descripción
 ---|---
-`git rm -r --cached`|Borra el caché de los archivos seguidos por `git add`, para actualizar el funcionamiento del archivo `.gitignore`. Para esto, debe ser seguido por `git add .`.
+`git rm -r --cached .`|Borra el caché de los archivos seguidos por `git add`, para actualizar el funcionamiento del archivo `.gitignore`. Para esto, debe ser seguido por `git add .`.

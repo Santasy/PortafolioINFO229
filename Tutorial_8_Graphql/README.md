@@ -5,7 +5,7 @@ Para la implementación de este tutorial, seguí el tutorial [Learn GraphQL In 4
 - `simpledata.js` guarda la información a utilizar, y
 - `server.js` guarda la lógica de una aplicación express que recibe mensajes HTTP en la ruta `localhost:5000/graphql`.
 
-Para probar el programa, se debe ejecutar el comando `npm run devStart`, y dirigirse a la ruta ya nombrada. Ahí se una interfaz gráfica nativa `GraphiQL`, que permite realizar las interacciones.
+Para probar el programa, antes de cualquier ejecución deben instalarse las librerías necesarias con `npm install`, y en adelante se debe ejecutar el comando `npm run devStart` para iniciar el servicio, y dirigirse a la ruta local ya nombrada. Ahí se una interfaz gráfica nativa `GraphiQL`, que permite realizar las interacciones.
 
 Para el funcionamiento, es necesario aclarar la existencia de dos funcionalidades principales de GraphQL:
 - `query`: Que trabaja la lógica de mensajes tipo `GET`, permitiendo obtener solo la información requerida, sin nada que sobre, permitiendo, con el diseño correcto, obtener lo necesario en solo un mensaje. Este será por defecto el comando entregado a un mensaje de GraphQL.
