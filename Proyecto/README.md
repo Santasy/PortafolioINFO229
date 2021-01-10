@@ -5,4 +5,4 @@ Proyecto desarrollado por:
 - Felipe Lagos
 
 Un ejemplo del funcionamiento en Slack:
-<img source="https://github.com/Santasy/PortafolioINFO229/raw/master/Proyecto/ejemplo.png">
+<img source="https://github.com/Santasy/PortafolioINFO229/raw/main/Proyecto/ejemplo.png">
